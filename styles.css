@@ -9,23 +9,34 @@ body {
     flex-direction: column;
     margin: 0;
     background-color: #fff8ee;
+    background-image: url(Images/background-image.jpg);
   }
-
-.header-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-    
-.main-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
 
 header {
     background-color: white;
     padding: 20px 60px;
     margin: 0 0 10px 0;
     border-bottom: 3px solid #362917;
+}
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section {
+    background-color: white;
+    padding: 20px 20px;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
 }
   
 h1 {
@@ -34,7 +45,6 @@ h1 {
     font-size: 30px;
     color: #362917;
     width: 50%;
-    display: inline-block;
 }
 
 header nav a {
@@ -47,38 +57,41 @@ header nav a {
     margin: 0 10px;
 }
 
-.about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
 header nav {
     width: 45%;
-    display: inline-block;
-    text-align: right;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
 
 main {
-    width: 65%;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    max-width: 800px;
     padding: 20px;
-    margin: 0 0 10px 0;
-    display: inline-block;
-    background-color: white;
+    margin: auto;
 }
 
 aside {
     width: 25%;
-    padding: 20px 10px;
-    display: inline-block;
-    vertical-align: top;
+    padding: 20px 5px 5px 10px;
     text-align: center;
     background-color: white;
 }
 
+.aside-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 aside nav a {
-    display: inline-block;
-    margin: 15px 8px 0 8px;
+    margin: 0 8px;
+}
+
+aside nav {
+    padding: 10px 0;
 }
   
 h2 {
@@ -100,13 +113,7 @@ p {
   
 .headshot-image {
     margin: 15px 25px 20px 0;
-    align-self: flex-start;
-}
-  
-aside::after {
-    content:"";
-    clear:both;
-    display: block;
+    float: left;
 }
   
 footer {
@@ -121,5 +128,10 @@ p.CopyRight {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 14px;
-    display: inline-block;
+}
+
+@media all and (max-width: 550px) {
+    main {
+        flex-direction: column;
+    }
 }
