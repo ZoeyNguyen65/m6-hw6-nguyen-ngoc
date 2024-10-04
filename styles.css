@@ -130,8 +130,3 @@ p.CopyRight {
     font-size: 14px;
 }
 
-@media all and (max-width: 550px) {
-    main {
-        flex-direction: column;
-    }
-}
